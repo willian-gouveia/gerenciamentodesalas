@@ -11,12 +11,14 @@ app.use(express.json());
 const usuarioRouter = require('./routes/usuarioRoutes');
 const professorRouter = require('./routes/professorRoutes');
 const cursoRouter = require('./routes/cursoRoutes');
+const agendamentoRouter = require('./routes/agendamentoRoutes');
 
 app.use(middleware_cors.allowAll);
 
 app.use(usuarioRouter);
 app.use(professorRouter);
 app.use(cursoRouter);
+app.use(agendamentoRouter);
 
 app.listen(PORT, () => {
   console.log(`O servidor esta rodando na porta ${PORT}.`);
